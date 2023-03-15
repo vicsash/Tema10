@@ -9,6 +9,9 @@ public class Ejer02 {
     public Ejer02(){
         aray = new int[10];
         aray = Lib.fillArrayRandom(aray,50,0);
+        ArrayListEstadistica arrayListEstadistica = new ArrayListEstadistica();
+        ArrayList<Double>list = arrayListEstadistica.arayList(aray);
+
 
     }
 }
