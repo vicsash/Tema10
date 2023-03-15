@@ -15,9 +15,14 @@ public class Ejer01 {
         System.out.println(list);
     }
 
-
+    /**
+     * The method to convert the array into arraylist
+     * where even numbers come first and then the odd numbers
+     * @param aray receives array with random numbers
+     * @return an arrayList
+     */
     public ArrayList<Integer> arayList (int[] aray){
-        ArrayList<Integer> arayList=  new ArrayList<Integer>();
+        ArrayList<Integer> arayList =  new ArrayList<Integer>();
         for (int j : aray) {
             if (j % 2 == 0) {
                 arayList.add(j);
