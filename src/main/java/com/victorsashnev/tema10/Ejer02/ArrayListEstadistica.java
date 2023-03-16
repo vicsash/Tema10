@@ -2,67 +2,90 @@ package com.victorsashnev.tema10.Ejer02;
 
 import java.util.ArrayList;
 
-public class ArrayListEstadistica implements  IEstadisticas{
-    public ArrayList<Double> arayList (int[] aray){
-        ArrayList<Double> arayList =  new ArrayList<Double>();
-        for (double j : aray) {
-           arayList.add(j);
-        }
-        return arayList;
-    }
-
-
+public class ArrayListEstadistica extends ArrayList<Double> implements  IEstadisticas{
+// Devolver constructor si recibe array entero
     @Override
     public double minimo() {
         double max = Double.MAX_VALUE;
-        double minimo;
-        for (double j :list){
+        double minimo = 0;
+        for (double j : this){
             if(j<max) {
                 minimo = j;
                 max =j;
             }
         }
-        return 0;
+        return minimo;
     }
 
     @Override
     public double maximo() {
-        double max = Double.MAX_VALUE;
-        double minimo;
-        for (double j :list){
-            if(j<max) {
-                minimo = j;
-                max =j;
+        double max = 0;
+        double min = Double.MIN_VALUE;
+        for (double j : this){
+            if(j>min) {
+                max = j;
+                min =j;
             }
         }
-        return 0;
+        return max;
     }
 
     @Override
     public double sumatorio() {
         double sum = 0;
 
-        for (double j :list){
+        for (double j : this){
             sum = sum + j;
         }
 
-        return 0;
+        return sum;
     }
 
     @Override
     public double media() {
         double sum =0;
         double counter = 0;
-        for (double j :list){
+        for (double j : this){
             sum = sum + j;
             counter++;
         }
         double ave = sum / counter;
-        return 0;
+        return ave;
     }
 
     @Override
     public double moda() {
-        return 0;
+        double repeat =0;
+        double min = Double.MIN_VALUE;
+        for(double j : this){
+            double num = j;
+            double counter = 0;
+            for(double i : this){
+                if(num==i) {
+                    counter++;
+                }
+            }
+            if(counter>min){
+                repeat = num;
+                min = counter;
+            }
+        }
+        return repeat;
     }
+
+    public ArrayList<Double> arayToAraylistDouble(Double[] aray){
+        ArrayList<Double> arayList =  new ArrayList<Double>();
+        for (double j : aray) {
+            if (j % 2 == 0) {
+                arayList.add(j);
+            }
+        }
+        for (double j : aray) {
+            if (j % 2 != 0) {
+                arayList.add(j);
+            }
+        }
+        return arayList;
+    }
+
 }

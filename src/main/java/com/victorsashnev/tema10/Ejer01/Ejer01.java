@@ -9,7 +9,7 @@ public class Ejer01 {
 
         int[] aray = new int[10];
 
-        aray =Lib.fillArrayRandom(aray,50,0);
+        aray =Lib.fillArrayRandomInt(aray,50,0);
 
         ArrayList<Integer>list = arayList(aray);
         System.out.println(list);
@@ -22,7 +22,7 @@ public class Ejer01 {
      * @return an arrayList
      */
     public ArrayList<Integer> arayList (int[] aray){
-        ArrayList<Integer> arayList =  new ArrayList<Integer>();
+        ArrayList<Integer> arayList =  new ArrayList<Integer>(aray.length);
         for (int j : aray) {
             if (j % 2 == 0) {
                 arayList.add(j);

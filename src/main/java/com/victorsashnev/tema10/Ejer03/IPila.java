@@ -1,9 +1,9 @@
 package com.victorsashnev.tema10.Ejer03;
-    public interface IPila<String> {
-        String push(String e);
-        String pop();
-        int size();
-        String top();
+    public interface IPila<T> {
+        T push(String e);
+        T pop();
+        T size();
+        T top();
         boolean isEmpty();
     }
 

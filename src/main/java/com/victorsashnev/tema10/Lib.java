@@ -13,6 +13,10 @@ public class Lib {
         int numb;
         return numb= rand.nextInt(max-min+1)+min;
     }
+    public static double randomNumeberDouble(double max, double min){
+        double numb;
+        return numb= rand.nextDouble()*max+min;
+    }
     public static GregorianCalendar date(){
         int day = randomNumeber(30,1);
         int month = randomNumeber(11,0);
@@ -100,12 +104,21 @@ public class Lib {
         return sb.toString();
     }
 
-    public static int[] fillArrayRandom(int[] aray, int MAX, int MIN){
+    public static int[] fillArrayRandomInt(int[] aray, int MAX, int MIN){
         Random rand = new Random();
 
         for(int i=0; i<aray.length;i++){
 
             aray[i] = rand.nextInt(MAX-MIN+1)+MIN;
+        }
+
+        return aray;
+    }
+    public static Double[] fillArrayRandomDouble(Double[] aray, Double MAX, Double MIN){
+        Random rand = new Random();
+        for(int i=0; i<aray.length;i++){
+
+            aray[i] = randomNumeberDouble(MAX,MIN);
         }
 
         return aray;

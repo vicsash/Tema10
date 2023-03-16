@@ -1,6 +1,6 @@
 package com.victorsashnev.tema10.Ejer03;
 import java.util.Random;
-public class Ejer03 {
+/*public class Ejer03 {
         public <GenericStack> Ejer03() {
                 GenericStack<String> genericStack = new GenericStack<>(5);
                 Random random = new Random();
@@ -18,10 +18,11 @@ public class Ejer03 {
                                 System.out.printf("Desencolando %.2f\n", genericStack.pop());
                         }
                         System.out.println(genericStack);
-                        System.out.println(genericStack.toDebugString());
+
                 }
                 System.out.println(genericStack);
-                System.out.println(genericStack.toDebugString());
+
         }
 
 }
+*/

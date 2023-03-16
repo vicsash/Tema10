@@ -1,6 +1,6 @@
 package com.victorsashnev.tema10.Ejer03;
 
-public class GenericDynamicArray <S> implements  IPila{
+/*public class GenericDynamicArray <T> implements  IPila<T>{
     private static final double ERROR = Double.NEGATIVE_INFINITY;
     //Static is used because they will not be extracted to other classes ¿?¿?¿?¿?¿?¿?¿?
     private static final int DEAULT_CAPACITY = 10;
@@ -11,13 +11,13 @@ public class GenericDynamicArray <S> implements  IPila{
     public Stack(){
         this(DEAULT_CAPACITY);
     }
-
     public void Stack(int capacity){
         data = new double[capacity];
         size = 0;
     }
+
     @Override
-    public Object push(Object e) {
+    public T push(T e) {
         if(isFull()){
             resize();
         }
@@ -26,9 +26,9 @@ public class GenericDynamicArray <S> implements  IPila{
         return true;
     }
 
-    public Object pop(){
-        double result =ERROR;
-        if(!isEmpty()){
+    public T pop(){
+        double result = ERROR;
+        if(isEmpty()){
             result = data[size- 1];
             size--;
         }
@@ -36,23 +36,23 @@ public class GenericDynamicArray <S> implements  IPila{
     }
 
     @Override
-    public int size() {
+    public T size() {
         return 0;
     }
 
-    public Object top(){
+    public T top(){
         double result =ERROR;
         if(!isEmpty()){
             result = data[size-1];
         }
         return result;
     }
-    private S resize(){
+    private T resize(){
         double[] array = new double[Math.round(data.length * GROW_FACTOR)];
         for(int i = 0; i < data.length;i++){
             array[i] = data[i];
         }
-        return (S) (data = array);
+        return (T) (data = array);
     }
 
     public boolean isEmpty(){
@@ -76,3 +76,4 @@ public class GenericDynamicArray <S> implements  IPila{
                 '}';
     }
 }
+*/
