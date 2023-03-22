@@ -8,3 +8,49 @@ public class Main {
         Ejer02 ejer02 = new Ejer02();
     }
 }
+
+/*
+// // Type your code here, or load an example.
+//class Square {
+//    public static void main(String [] args) {
+//        Persona p1 = new Persona(6,"Juan");
+//        Persona p2 = new Persona(6,"Pedro");
+//
+//        System.out.println(p1.equals(p2));
+//
+//        System.out.println(p1.hashCode());
+//        System.out.println(p2.hashCode());
+//    }
+//        public static class Persona{
+//            private int dni;
+//            private String nombre;
+//
+//            public Persona(int dni, String nombre){
+//                this.dni=dni;
+//                this.nombre=nombre;
+//            }
+//            public int getDni(){
+//                return dni;
+//            }
+//
+//            public String getNombre(){
+//                return nombre;
+//            }
+//        @Override
+//        public boolean equals(Object o){
+//            if(this == o)
+//            return true;
+//            if(o == null || getClass() != o.getClass())
+//            return false;
+//            Persona p =(Persona)o;
+//            return this.dni ==p.dni && this.nombre.equals(p.nombre);
+//        }
+//
+//        @Override
+//        public int hashCode(){
+//            int result = nombre.hashCode();
+//            return 31 * result +dni;
+//        }
+//    }
+//}
+ */
