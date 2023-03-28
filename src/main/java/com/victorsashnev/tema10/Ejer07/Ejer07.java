@@ -5,8 +5,9 @@ import com.victorsashnev.tema10.Lib;
 import java.util.HashMap;
 
 public class Ejer07 {
-    HashMap<String,Double>currency = new HashMap<>();
+    private HashMap<String,Double>currency = new HashMap<>();
     public  Ejer07(){
+        //List of all curencies
         currency.put("USD",1.08);
         currency.put("GBP",0.88);
         currency.put("INR",88.89);
@@ -31,9 +32,10 @@ public class Ejer07 {
                 case 1:
                     System.out.println("Introduce la modena a cual quieres convertir el euro");
                     moneda = Lib.scanString();
-                    System.out.println("Introduce la cantidad en euros");
-                    euros = Lib.scanDouble();
+                    //Confimation to see if key existst
                     if(currency.containsKey(moneda)){
+                        System.out.println("Introduce la cantidad en euros");
+                        euros = Lib.scanDouble();
                         System.out.println(currency.get(moneda)*euros);
                     }else
                         System.out.println("Este moneda no existe");

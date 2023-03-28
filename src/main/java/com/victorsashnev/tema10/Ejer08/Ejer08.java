@@ -5,7 +5,7 @@ import com.victorsashnev.tema10.Lib;
 import java.util.HashMap;
 
 public class Ejer08 {
-    HashMap<String,String> traductor = new HashMap<>();
+    private final HashMap<String,String> traductor = new HashMap<>();
     public Ejer08(){
         int menu;
         String key;
@@ -18,6 +18,7 @@ public class Ejer08 {
                 case 1:
                     System.out.println("Introduce la palabra que qieres añadir al diccionario");
                     key = Lib.scanString();
+                    //Confirmation to see if key existst
                     if(traductor.containsKey(key)) {
                         System.out.println("Este traduccion ya existe");
                     }else{
@@ -29,22 +30,24 @@ public class Ejer08 {
                 case 2:
                     System.out.println("Introduce la palabra que qieres modificar");
                     key = Lib.scanString();
+                    //Confirmation to see if key existst
                     if(traductor.containsKey(key)) {
-                        System.out.println("Este palabra no existe");
-                    }else{
                         System.out.println("Introduce el valor modificado");
                         valor = Lib.scanString();
                         traductor.replace(key,valor);
+                    }else{
+                        System.out.println("Este palabra no existe");
                     }
                     break;
                     //Eliminate word
                 case 3:
                     System.out.println("Introduce la palabra que qiereseliminar del diccionario");
                     key = Lib.scanString();
+                    //Confirmation to see if key existst
                     if(traductor.containsKey(key)) {
-                        System.out.println("Este palabra no existe");
+                        traductor.remove(key);
                     }else{
-                       traductor.remove(key);
+                        System.out.println("Este palabra no existe");
                     }
                     break;
                     //Consult word
