@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Ejer09{
     private int numJugador = 10;
     private final HashMap<String,String> DefDiccio = new HashMap<>();
-    private ArrayList<Jugador> jugador = new ArrayList<Jugador>();
+    private ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     public Ejer09(){
         int menu;
         String valor;
@@ -78,8 +78,10 @@ public class Ejer09{
                         puntuacion=0;
                         int numb = DefDiccio.size();
                         int rand = Lib.randomNumeber(numb,0);
-                        System.out.println("Que es la traduccion de " + cloneTraductor.values().toArray()[numb]);
+                        System.out.println("Que es la traduccion de " + cloneTraductor.values().toArray()[rand]);
                         valor = Lib.scanString();
+                        if(cloneTraductor.isEmpty())
+                            break;
                         if(cloneTraductor.containsKey(valor)) {
                             System.out.println("Bien, has acertado la palabra");
                             puntuacion++;
@@ -87,13 +89,14 @@ public class Ejer09{
                         }else{
                             game = 0;
                             System.out.println("Ha perdido con" + puntuacion +"puntos");
-                            jugador.add(valor,puntuacion);
+                            jugadores = new ArrayList<>();
+                            jugadores.;
                             cloneTraductor = null;
                         }
                     }while(game!=0);
                     break;
                 case 7:
-                    System.out.println(bestScore(jugador));
+                    System.out.println(bestScore(jugadores));
                     break;
                 case 0:
                     break;
@@ -117,17 +120,33 @@ public class Ejer09{
         System.out.println("0. Salir de la aplicación.");
     }
 //Getindex
+
+    /**
+     * Method to get the 5 players with max points
+     * @param jugador
+     * @return
+     */
     private String bestScore(ArrayList<Jugador> jugador) {
         int min = Integer.MIN_VALUE;
-        int point;
+        int counter =0;
+        int max = 0;
         StringBuilder sb = new StringBuilder();
         //Collections.sort(jugador,Collections.reverseOrder());
         ArrayList<String>points = new ArrayList<String>();
         for(int i = 0; i < jugador.size();i++){
             for(int j = 0; j < jugador.size();j++){
-                if(jugador[i])
+                if(jugador.get(i).getPuntuacion()>min)
+                    max = jugador.get(i).getPuntuacion();
+                    min = jugador.get(i).getPuntuacion();
             }
+            sb.append(jugador.get(max));
+            counter++;
+            if (counter==5)
+                break;
+
         }
         return sb.toString();
     }
 }
+//MIRAR INTERFAZ FUNCCIONAL
+//LAMDA

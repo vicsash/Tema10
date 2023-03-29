@@ -1,8 +1,8 @@
 package com.victorsashnev.tema10.Ejer09;
 
 public class Jugador {
-    private String name;
-    private int puntuacion;
+    private final String name;
+    private final int puntuacion;
 
     public String getName() {
         return name;
