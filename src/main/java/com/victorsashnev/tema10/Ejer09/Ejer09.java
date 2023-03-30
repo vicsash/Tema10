@@ -89,8 +89,8 @@ public class Ejer09{
                         }else{
                             game = 0;
                             System.out.println("Ha perdido con" + puntuacion +"puntos");
-                            jugadores = new ArrayList<>();
-                            jugadores.;
+                            //jugadores = new ArrayList<>();
+                            jugadores.add(new Jugador(valor,puntuacion));
                             cloneTraductor = null;
                         }
                     }while(game!=0);
@@ -135,9 +135,10 @@ public class Ejer09{
         ArrayList<String>points = new ArrayList<String>();
         for(int i = 0; i < jugador.size();i++){
             for(int j = 0; j < jugador.size();j++){
-                if(jugador.get(i).getPuntuacion()>min)
+                if(jugador.get(i).getPuntuacion()>min){
                     max = jugador.get(i).getPuntuacion();
                     min = jugador.get(i).getPuntuacion();
+                }
             }
             sb.append(jugador.get(max));
             counter++;

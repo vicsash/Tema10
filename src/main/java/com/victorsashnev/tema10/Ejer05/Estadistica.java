@@ -22,7 +22,7 @@ public class Estadistica{
         char sexo;
         for(int i = 0; i<pacientes.length; i++){
 
-            GregorianCalendar calendar = Lib.date();
+            GregorianCalendar calendar = Lib.dateWithRand();
             if(random.nextBoolean()){
                sexo = 'M';
             } else{

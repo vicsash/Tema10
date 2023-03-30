@@ -11,16 +11,23 @@ public class Lib {
     static Scanner scanner = new Scanner(System.in);
     public static int randomNumeber(int max, int min){
         int numb;
-        return numb= rand.nextInt(max-min+1)+min;
+        return numb= rand.nextInt(max- min + 1) + min;
     }
     public static double randomNumeberDouble(double max, double min){
         double numb;
         return numb= rand.nextDouble()*max+min;
     }
-    public static GregorianCalendar date(){
+    public static GregorianCalendar dateWithRand(){
         int day = randomNumeber(30,1);
-        int month = randomNumeber(11,0);
-        int year = randomNumeber(2023,1900);
+        int month = randomNumeber(12,0);
+        int year = randomNumeber(2022,1980);
+
+        return new GregorianCalendar(day,month,year);
+    }
+    public static GregorianCalendar dateSecondWay(){
+        int day =  new GregorianCalendar().get(Calendar.DAY_OF_MONTH);
+        int month = new GregorianCalendar().get(Calendar.MONTH);
+        int year = new GregorianCalendar().get(Calendar.YEAR);
 
         return new GregorianCalendar(day,month,year);
     }

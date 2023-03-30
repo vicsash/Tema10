@@ -6,13 +6,17 @@ public class Ejer10 {
     public Ejer10(){
         int numMenu;
         int numSubMenu;
-
+        int num;
+        Management manage = new Management();
         do {
             System.out.println(menu());
             numMenu = Lib.scanInt();
             switch (numMenu){
                     // Nuevo empleado
                 case 1:
+                    System.out.println("Entra 1 si tiene un hijo 0 si no.");
+                    num = Lib.scanInt();
+                    manage.newWorker(num);
                     break;
                     //Nuevo hijo
                 case 2:
