@@ -1,11 +1,16 @@
 package com.victorsashnev.tema10;
 import com.victorsashnev.tema10.Ejer01.Ejer01;
 import com.victorsashnev.tema10.Ejer02.Ejer02;
+import com.victorsashnev.tema10.Ejer06.Ejer06;
+import com.victorsashnev.tema10.Ejer07.Ejer07;
+import com.victorsashnev.tema10.Ejer08.Ejer08;
 public class Main {
     public static void main(String[] args) {
 
         //Ejer01 ejer01 = new Ejer01();
-        Ejer02 ejer02 = new Ejer02();
+        //Ejer02 ejer02 = new Ejer02();
+        //Ejer07 ejer07 = new Ejer07();
+        Ejer08 ejer08 = new Ejer08();
     }
 }
 

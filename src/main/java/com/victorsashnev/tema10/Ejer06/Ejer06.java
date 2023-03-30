@@ -6,7 +6,7 @@ import com.victorsashnev.tema10.Lib;
 import java.util.HashMap;
 
 public class Ejer06 {
-    HashMap<String,String>Traductor = new HashMap<>();
+    private HashMap<String,String>Traductor = new HashMap<>();
     public Ejer06(){
         int menu;
         int palabras;
