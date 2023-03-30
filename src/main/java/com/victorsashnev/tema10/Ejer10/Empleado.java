@@ -9,7 +9,11 @@ public class Empleado {
     private final String apellido;
     private final GregorianCalendar fechaNaci;
     private double sueldo;
-    private final boolean hijo;
+    private  Hijo hijo;
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
 
     public String getNie() {
         return nie;
@@ -31,17 +35,29 @@ public class Empleado {
         return sueldo;
     }
 
-    public boolean getHijo() {
+    public Hijo getHijo() {
         return hijo;
     }
 
-    public Empleado(String nie, String nombre, String apellido, GregorianCalendar fechaNaci, double sueldo, boolean hijo) {
+    public void setHijo(Hijo hijo) {
+        this.hijo = hijo;
+    }
+
+    public Empleado(String nie, String nombre, String apellido, GregorianCalendar fechaNaci, double sueldo, Hijo hijo) {
         this.nie = nie;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNaci = fechaNaci;
         this.sueldo = sueldo;
         this.hijo = hijo;
+    }
+
+    public Empleado(String nie, String nombre, String apellido, GregorianCalendar fechaNaci, double sueldo) {
+        this.nie = nie;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNaci = fechaNaci;
+        this.sueldo = sueldo;
     }
 
     @Override

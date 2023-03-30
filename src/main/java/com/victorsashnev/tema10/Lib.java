@@ -22,14 +22,9 @@ public class Lib {
         int month = randomNumeber(12,0);
         int year = randomNumeber(2022,1980);
 
-        return new GregorianCalendar(day,month,year);
-    }
-    public static GregorianCalendar dateSecondWay(){
-        int day =  new GregorianCalendar().get(Calendar.DAY_OF_MONTH);
-        int month = new GregorianCalendar().get(Calendar.MONTH);
-        int year = new GregorianCalendar().get(Calendar.YEAR);
-
-        return new GregorianCalendar(day,month,year);
+         GregorianCalendar calendar = new GregorianCalendar();
+         calendar.set(year,month,day);
+         return calendar;
     }
     public static int searchIfReferenceInArray(int refence,int counter, int []aray){
         for(int i = 0; i < counter; i++){

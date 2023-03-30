@@ -10,20 +10,13 @@ import java.util.Random;
 
 public class Date {
     static GregorianCalendar calendar;
-    static SimpleDateFormat sdfDate = new SimpleDateFormat("dd--MM-yyyy");
+    static SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MM-yyyy");
     public static void main(String[] args){
         for(int i = 0; i < 5;i++){
             calendar = Lib.dateWithRand();
             System.out.println(sdfDate.format(calendar.getTime()));
-            System.out.println();
-
         }
-    }
-    public static GregorianCalendar dateSecondWay(){
-        int day =  new GregorianCalendar().get(Calendar.DAY_OF_MONTH);
-        int month = new GregorianCalendar().get(Calendar.MONTH);
-        int year = new GregorianCalendar().get(Calendar.YEAR);
-
-        return new GregorianCalendar(day,month,year);
+        GregorianCalendar test = new GregorianCalendar();
+        System.out.println(test.getTime());
     }
 }
