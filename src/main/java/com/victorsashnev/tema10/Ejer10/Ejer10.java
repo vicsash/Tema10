@@ -64,6 +64,11 @@ public class Ejer10 {
                     break;
                     // Borrar hijo
                 case 5:
+                    //
+                    //
+                    //
+                    //
+                    //
                     break;
                     // Consultas
                 case 6:
