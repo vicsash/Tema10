@@ -1,25 +1,20 @@
 package com.victorsashnev.tema10.Ejer11;
 
 public class Grupo {
-    private int id;
-    private int counter = 0;
+    private String codigoIdentificador;
     private String nombre;
     private Aula aula;
 
-    public Grupo(int id, int counter, String nombre, Aula aula) {
-        this.id = counter++;
-        this.counter = counter;
+    public Grupo( String codigoIdentificador,String nombre, Aula aula) {
+        this.codigoIdentificador = codigoIdentificador;
         this.nombre = nombre;
         this.aula = aula;
     }
 
-    public int getId() {
-        return id;
+    public String getId() {
+        return codigoIdentificador;
     }
 
-    public int getCounter() {
-        return counter;
-    }
 
     public String getNombre() {
         return nombre;
@@ -32,8 +27,7 @@ public class Grupo {
     @Override
     public String toString() {
         return "Grupo{" +
-                "id=" + id +
-                ", counter=" + counter +
+                "codigoIdentificador=" + codigoIdentificador +
                 ", nombre='" + nombre + '\'' +
                 ", aula=" + aula +
                 '}';

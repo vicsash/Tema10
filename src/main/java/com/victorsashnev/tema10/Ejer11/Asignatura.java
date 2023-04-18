@@ -1,26 +1,18 @@
 package com.victorsashnev.tema10.Ejer11;
 
 public class Asignatura {
-    private int id;
-    private int counter = 0;
+    private String codigoIdentificador;
     private String nombre;
     private Profesor profesor;
 
-    public Asignatura(int id, int counter, String nombre, Profesor profesor) {
-        this.id = counter++;
-        this.counter = counter;
+    public Asignatura(String codigoIdentificador,String nombre, Profesor profesor) {
+        this.codigoIdentificador = codigoIdentificador;
         this.nombre = nombre;
         this.profesor = profesor;
     }
-
-    public int getId() {
-        return id;
+    public String getCodigoIdentificador() {
+        return codigoIdentificador;
     }
-
-    public int getCounter() {
-        return counter;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -32,8 +24,7 @@ public class Asignatura {
     @Override
     public String toString() {
         return "Asignatura{" +
-                "id=" + id +
-                ", counter=" + counter +
+                "String codigoIdentificador=" + codigoIdentificador +
                 ", nombre='" + nombre + '\'' +
                 ", profesor=" + profesor +
                 '}';

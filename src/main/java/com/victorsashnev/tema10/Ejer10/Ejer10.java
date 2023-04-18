@@ -1,6 +1,6 @@
 package com.victorsashnev.tema10.Ejer10;
 
-import com.victorsashnev.tema10.Lib;
+import com.victorsashnev.tema10.LibMethods;
 
 public class Ejer10 {
     public Ejer10(){
@@ -13,12 +13,12 @@ public class Ejer10 {
         Management manage = new Management();
         do {
             System.out.println(menu());
-            numMenu = Lib.scanInt();
+            numMenu = LibMethods.scanInt();
             switch (numMenu){
                     // Nuevo empleado
                 case 1:
                     System.out.println("Entra 1 si tiene un hijo, 0 si no.");
-                    num = Lib.scanInt();
+                    num = LibMethods.scanInt();
                     System.out.println("Introduce el nie,nombre,apellido y sueldo, y si tiene hijo su nombre y edad");
                     if(manage.newWorker(num) == 1)
                         System.out.println("Nuevo empleado creado");
@@ -28,11 +28,11 @@ public class Ejer10 {
                     //Nuevo hijo
                 case 2:
                     System.out.println("Pone el numero de identificacion de empleado ");
-                    nie = Lib.scanString();
+                    nie = LibMethods.scanString();
                     System.out.println("Entra en nombre del hijo");
-                    nombre = Lib.scanString();
+                    nombre = LibMethods.scanString();
                     System.out.println("Entra la edad del hijo");
-                    edad = Lib.scanInt();
+                    edad = LibMethods.scanInt();
                     if(manage.newChild(nie,nombre,edad) == 1)
                         System.out.println("Nuevo niño añadido al empleado" + nie);
                     else
@@ -41,9 +41,9 @@ public class Ejer10 {
                     //Modificar sueldo
                 case 3:
                     System.out.println("Pone el numero de identificacion de empleado ");
-                    nie = Lib.scanString();
+                    nie = LibMethods.scanString();
                     System.out.println("Introduce el nuveo sueldo del trabajador");
-                    sueldo = Lib.scanDouble();
+                    sueldo = LibMethods.scanDouble();
                     if(manage.setSueldo(nie,sueldo) == 1)
                         System.out.println("Sueldo cambiado");
                     else
@@ -56,7 +56,7 @@ public class Ejer10 {
                 //Borrar empleado
                 case 4:
                     System.out.println("Pone el numero de identificacion de empleado ");
-                    nie = Lib.scanString();
+                    nie = LibMethods.scanString();
                     if(manage.removeWorker(nie) == 1)
                         System.out.println("Empleado despidido" + nie);
                     else
@@ -74,12 +74,12 @@ public class Ejer10 {
                 case 6:
                     do {
                         System.out.println(subMenuConsultas());
-                        numSubMenu = Lib.scanInt();
+                        numSubMenu = LibMethods.scanInt();
                         switch (numSubMenu) {
                             //  Buscar por NIF
                             case 1:
                                 System.out.println("Entra el NIF de empleado");
-                                nie = Lib.scanString();
+                                nie = LibMethods.scanString();
                                 result =manage.consultarNif(nie);
                                 if(result == null)
                                     System.out.println("No hay empleado con este NIE");
@@ -89,7 +89,7 @@ public class Ejer10 {
                             // Buscar por nombre
                             case 2:
                                 System.out.println("Entra el nombre de empleado");
-                                nombre = Lib.scanString();
+                                nombre = LibMethods.scanString();
                                 result = manage.consultarNombre(nombre);
                                 if(result == null)
                                     System.out.println("No hay empleado con este NIE");
@@ -99,17 +99,17 @@ public class Ejer10 {
                             // Buscar por rango de edad.
                             case 3:
                                 System.out.println("Introduce la edad minima");
-                                minAge = Lib.scanInt();
+                                minAge = LibMethods.scanInt();
                                 System.out.println("Introduce la edad maxima");
-                                maxAge = Lib.scanInt();
+                                maxAge = LibMethods.scanInt();
                                 result = manage.rangoEdad(minAge,maxAge);
                                 break;
                             //Buscar por rango de sueldo.
                             case 4:
                                 System.out.println("Introduce el sueldo minimo");
-                                sueldoMin = Lib.scanDouble();
+                                sueldoMin = LibMethods.scanDouble();
                                 System.out.println("Introduce el sueldo maxima");
-                                sueldoMax = Lib.scanDouble();
+                                sueldoMax = LibMethods.scanDouble();
                                 result = manage.rangoSueldo(sueldoMin,sueldoMax);
                                 if(result == null)
                                     System.out.println("No hay empleado que tienen sueldo dentro este rango");

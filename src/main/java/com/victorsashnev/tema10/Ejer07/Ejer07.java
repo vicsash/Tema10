@@ -1,6 +1,6 @@
 package com.victorsashnev.tema10.Ejer07;
 
-import com.victorsashnev.tema10.Lib;
+import com.victorsashnev.tema10.LibMethods;
 
 import java.util.HashMap;
 
@@ -27,15 +27,15 @@ public class Ejer07 {
         Double euros;
             do{
             menu();
-            menu= Lib.scanInt();
+            menu= LibMethods.scanInt();
             switch (menu){
                 case 1:
                     System.out.println("Introduce la modena a cual quieres convertir el euro");
-                    moneda = Lib.scanString();
+                    moneda = LibMethods.scanString();
                     //Confimation to see if key existst
                     if(currency.containsKey(moneda)){
                         System.out.println("Introduce la cantidad en euros");
-                        euros = Lib.scanDouble();
+                        euros = LibMethods.scanDouble();
                         System.out.println(currency.get(moneda)*euros);
                     }else
                         System.out.println("Este moneda no existe");

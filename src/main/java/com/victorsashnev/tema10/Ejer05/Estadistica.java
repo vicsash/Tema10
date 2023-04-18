@@ -1,6 +1,6 @@
 package com.victorsashnev.tema10.Ejer05;
 
-import com.victorsashnev.tema10.Lib;
+import com.victorsashnev.tema10.LibMethods;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -22,14 +22,14 @@ public class Estadistica{
         char sexo;
         for(int i = 0; i<pacientes.length; i++){
 
-            GregorianCalendar calendar = Lib.dateWithRand();
+            GregorianCalendar calendar = LibMethods.dateWithRand();
             if(random.nextBoolean()){
                sexo = 'M';
             } else{
                 sexo = 'F';
             }
-            double weight = Lib.randomNumeberDouble(80,20);
-            double height = Lib.randomNumeberDouble(2,0);
+            double weight = LibMethods.randomNumeberDouble(80,20);
+            double height = LibMethods.randomNumeberDouble(2,0);
             pacientes[i] = new Paciente(calendar,sexo,weight,height);
 
         }

@@ -1,7 +1,6 @@
 package com.victorsashnev.tema10.Ejer06;
 
-import com.victorsashnev.tema10.Ejer05.Ejer05;
-import com.victorsashnev.tema10.Lib;
+import com.victorsashnev.tema10.LibMethods;
 
 import java.util.HashMap;
 
@@ -14,20 +13,20 @@ public class Ejer06 {
         String valor;
         do{
             menu();
-            menu= Lib.scanInt();
+            menu= LibMethods.scanInt();
             switch (menu){
                 case 1:
                     System.out.println("¿Cuantas palabras deseas intruducir?");
-                    palabras = Lib.scanInt();
+                    palabras = LibMethods.scanInt();
                     //A loop to add new elements to hashmap
                     for (int i = 0; i < palabras; i++){
-                        key = Lib.scanString();
-                        valor = Lib.scanString();
+                        key = LibMethods.scanString();
+                        valor = LibMethods.scanString();
                         Traductor.put(key,valor);
                     }
                     break;
                 case 2:
-                    key = Lib.scanString();
+                    key = LibMethods.scanString();
                     //If key doesn't exist it prints out that there is no such word
                     System.out.println(Traductor.getOrDefault(key, "No hay traduccion para este palabra"));
                     break;

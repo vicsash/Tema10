@@ -1,28 +1,24 @@
 package com.victorsashnev.tema10.Ejer11;
 
+import java.util.Arrays;
+
 public class Alumno {
     private int id;
     private int counter = 0;
     private String nombre;
     private Grupo grupo;
-    private Asignatura asignatura;
+    private String[] asignatura;
 
-    public Alumno(int id, int counter, String nombre, Grupo grupo, Asignatura asignatura) {
-        this.id = counter++;
-        this.counter = counter;
+    public Alumno(String nombre, Grupo grupo, String[] asignatura) {
+        this.id = ++counter;
         this.nombre = nombre;
         this.grupo = grupo;
-        this.asignatura = asignatura;
+        this.asignatura = new String[]{Arrays.toString(asignatura)};
     }
 
     public int getId() {
         return id;
     }
-
-    public int getCounter() {
-        return counter;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -31,7 +27,7 @@ public class Alumno {
         return grupo;
     }
 
-    public Asignatura getAsignatura() {
+    public String[] getAsignatura() {
         return asignatura;
     }
 
@@ -39,10 +35,9 @@ public class Alumno {
     public String toString() {
         return "Alumno{" +
                 "id=" + id +
-                ", counter=" + counter +
                 ", nombre='" + nombre + '\'' +
                 ", grupo=" + grupo +
-                ", asignatura=" + asignatura +
+                ", asignatura=" + Arrays.toString(asignatura) +
                 '}';
     }
 }

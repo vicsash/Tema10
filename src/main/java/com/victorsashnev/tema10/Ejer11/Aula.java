@@ -1,33 +1,25 @@
 package com.victorsashnev.tema10.Ejer11;
 
 public class Aula {
-    private int id;
+    private String codigoIdentificador;
     private int counter = 0;
-    private String metros;
+    private int metros;
 
-    public Aula(int id, int counter, String metros) {
-        this.id = counter++;
-        this.counter = counter;
+    public Aula(String codigoIdentificador, int metros) {
+        this.codigoIdentificador = codigoIdentificador;
+
         this.metros = metros;
     }
-
-    public int getId() {
-        return id;
+    public String getXodigoIdentificador() {
+        return codigoIdentificador;
     }
-
-    public int getCounter() {
-        return counter;
-    }
-
-    public String getMetros() {
+    public int getMetros() {
         return metros;
     }
-
     @Override
     public String toString() {
         return "Aula{" +
-                "id=" + id +
-                ", counter=" + counter +
+                "codigoIdentificador=" + codigoIdentificador +
                 ", metros='" + metros + '\'' +
                 '}';
     }

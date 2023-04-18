@@ -1,5 +1,5 @@
 package com.victorsashnev.tema10.Ejer10;
-import com.victorsashnev.tema10.Lib;
+import com.victorsashnev.tema10.LibMethods;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -14,16 +14,16 @@ public class Management {
     }
 
     protected int newWorker(int num){
-        String nie = Lib.scanString();
-        String nombre = Lib.scanString();
-        String apellido = Lib.scanString();
-        GregorianCalendar fechaNaci = Lib.dateWithRand();
-        double sueldo = Lib.scanDouble();
+        String nie = LibMethods.scanString();
+        String nombre = LibMethods.scanString();
+        String apellido = LibMethods.scanString();
+        GregorianCalendar fechaNaci = LibMethods.dateWithRand();
+        double sueldo = LibMethods.scanDouble();
         String nombreHijo ="No tiene hijo";
         int edadHijo = 0;
             if( num == 1) {
-                nombreHijo = Lib.scanString();
-                edadHijo = Lib.scanInt();
+                nombreHijo = LibMethods.scanString();
+                edadHijo = LibMethods.scanInt();
                 hijos.add(new Hijo(nombreHijo,edadHijo));
                 cont++;
                 if(empleados.size() != 0) {
@@ -159,7 +159,9 @@ public class Management {
         GregorianCalendar calendar = new GregorianCalendar();
 
         for (int i =0; i < empleados.size();i++){
-
+            if(empleados.get(i).getFechaNaci().before(max) && empleados.get(i).getFechaNaci().after(min)){
+                sb.append(empleados.get(i));
+            }
         }
         return sb.toString();
     }

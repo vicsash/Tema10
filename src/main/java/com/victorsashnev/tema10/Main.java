@@ -5,14 +5,19 @@ import com.victorsashnev.tema10.Ejer06.Ejer06;
 import com.victorsashnev.tema10.Ejer07.Ejer07;
 import com.victorsashnev.tema10.Ejer08.Ejer08;
 import com.victorsashnev.tema10.Ejer10.Ejer10;
+import com.victorsashnev.tema10.Ejer11.Ejer11;
+
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         //Ejer01 ejer01 = new Ejer01();
         //Ejer02 ejer02 = new Ejer02();
         //Ejer07 ejer07 = new Ejer07();
         //Ejer08 ejer08 = new Ejer08();
-        Ejer10 ejer10 = new Ejer10();
+        //Ejer10 ejer10 = new Ejer10();
+        Ejer11 ejer11 = new Ejer11();
     }
 }
 

@@ -1,6 +1,6 @@
 package com.victorsashnev.tema10.Ejer01;
 
-import com.victorsashnev.tema10.Lib;
+import com.victorsashnev.tema10.LibMethods;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ public class Ejer01 {
 
         int[] aray = new int[10];
 
-        aray =Lib.fillArrayRandomInt(aray,50,0);
+        aray = LibMethods.fillArrayRandomInt(aray,50,0);
 
         ArrayList<Integer>list = arayList(aray);
         System.out.println(list);

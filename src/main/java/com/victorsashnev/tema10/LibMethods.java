@@ -1,11 +1,10 @@
 package com.victorsashnev.tema10;
 
-import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Lib {
+public class LibMethods {
 
     static Random rand = new Random();
     static Scanner scanner = new Scanner(System.in);
