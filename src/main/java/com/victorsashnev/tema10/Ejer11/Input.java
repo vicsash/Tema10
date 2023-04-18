@@ -6,33 +6,29 @@ import java.io.OutputStreamWriter;
 import java.sql.Array;
 
 public class Input {
-    static OutputStreamWriter streamWriter = new OutputStreamWriter(System.out);
-    public static String inputName() throws IOException {
-        streamWriter.write("Escibe el nombre");
-        streamWriter.flush();
+    public static String inputName(){
+        System.out.println("Escibe el nombre");
+
         String nombre = LibMethods.scanString();
         return nombre;
     }
 
-    public static String idenCode() throws IOException {
-        streamWriter.write("Escibe el codigo");
-        streamWriter.flush();
+    public static String idenCode() {
+        System.out.println("Escibe el codigo");
         String nombre = LibMethods.scanString();
         return nombre;
     }
 
-    public static String[] inputStringArray() throws IOException{
+    public static String[] inputStringArray(){
         String[]asingaturas = new String[5];
         int loop = 1;
-        streamWriter.write("Intoduce 5 asignaturas para matricular");
-        streamWriter.flush();
+        System.out.println("Intoduce 5 asignaturas para matricular");
         for (int i = 0; i < 5; i++){
             do {
                 asingaturas[i] = LibMethods.scanString();
                 for (String asingatura : asingaturas) {
                     if (asingatura.equalsIgnoreCase(asingaturas[i])) {
-                        streamWriter.write("Este asignatura ya esta entrada");
-                        streamWriter.flush();
+                        System.out.println("Este asignatura ya esta entrada");
                     } else
                         loop = 0;
                 }

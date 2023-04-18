@@ -5,7 +5,7 @@ import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 
 public class LibMenu {
-    public LibMenu(String[] option, Object[] choice, String[] SubOption, Object[] subChoice, int submenu) throws IOException {
+    /*public LibMenu(String[] option, Object[] choice, String[] SubOption, Object[] subChoice, int submenu) throws IOException {
         int opt,opt2;
         StringWriter sw = new StringWriter();
         final int  EXIT = option.length-1;
@@ -28,9 +28,9 @@ public class LibMenu {
                 }
 
             }while(opt != EXIT);
-    }
+    }*/
 
-    public LibMenu(String[] option, Object[] choice) throws IOException {
+    public LibMenu(String[] option, Object[] choice)  {
         int opt = 0;
         StringWriter sw = new StringWriter();
         final int  EXIT = option.length-1;
@@ -40,25 +40,23 @@ public class LibMenu {
             try{
                 opt = LibMethods.scanInt();
                 opt = opt - 1 ;
-                streamWriter.write((String) choice[opt]);
-                streamWriter.write("\n");
-                streamWriter.flush();
+                System.out.println((String) choice[opt]);
+                System.out.println("\n");
+
             }catch (Exception e){
-                streamWriter.write("Error incorrect data entered");
-                streamWriter.write("\n");
-                streamWriter.flush();
+                System.out.println("Error incorrect data entered");
+                System.out.println("\n");
             }
 
         }while(opt != EXIT);
 
     }
 
-    private void display(String[] option)throws IOException{
+    private void display(String[] option){
         OutputStreamWriter streamWriter = new OutputStreamWriter(System.out);
         for(int i = 0; i < option.length; i++){
-            streamWriter.write(option[i]);
-            streamWriter.write("\n");
-            streamWriter.flush();
+            System.out.println(option[i]);
+            System.out.println("\n");
         }
 
     }
